@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = {
+module.exports = {
   devtool: 'source-map',
   entry: path.resolve(__dirname, 'app/main.jsx'),
   output: {
@@ -31,10 +31,8 @@ const config = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: 'production'
+        NODE_ENV: '"production"'
       }
     })
   ],
 };
-
-module.exports = config;

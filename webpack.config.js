@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = {
+module.exports = {
   devtool: 'eval',
   entry: path.resolve(__dirname, 'app/main.jsx'),
   output: {
@@ -24,10 +24,8 @@ const config = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: 'development'
+        NODE_ENV: '"development"'
       }
     })
-  ],
+  ]
 };
-
-module.exports = config;
