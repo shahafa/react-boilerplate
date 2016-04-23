@@ -20,7 +20,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'My App',
+      template: './app/index.html',
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
