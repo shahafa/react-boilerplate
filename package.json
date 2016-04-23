@@ -4,12 +4,12 @@
   "description": "pipl",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "start": "node server/server.js",
     "dev-web": "webpack-dev-server --content-base build/",
     "dev-server": "node-debug server/server.js",
     "build": "rm dist/*; webpack --progress --colors -p --config webpack.prod.config.js",
-    "lint": "node node_modules/eslint/bin/eslint.js ./app/*",
-    "postinstall": "npm build"
+    "lint": "node node_modules/eslint/bin/eslint.js ./app/*"
   },
   "author": "",
   "license": "ISC",
