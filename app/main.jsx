@@ -5,13 +5,13 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      clickCount: 0,
+      clickCount: 0
     };
   }
   handleClick(event) {
     event.preventDefault();
     this.setState({
-      clickCount: this.state.clickCount + 1,
+      clickCount: this.state.clickCount + 1
     });
   }
   render() {
@@ -24,4 +24,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-  <App />, document.getElementById('app'));
+  <App />, document.getElementById('content'));

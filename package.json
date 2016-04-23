@@ -4,9 +4,12 @@
   "description": "pipl",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base build/",
-    "build": "webpack --progress --colors -p --config webpack.prod.config.js",
-    "test": "node node_modules/eslint/bin/eslint.js ./app/*"
+    "start": "node server/server.js",
+    "dev-web": "webpack-dev-server --content-base build/",
+    "dev-server": "node-debug server/server.js",
+    "build": "rm dist/*; webpack --progress --colors -p --config webpack.prod.config.js",
+    "lint": "node node_modules/eslint/bin/eslint.js ./app/*",
+    "postinstall": "npm build"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +29,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "react": "^15.0.1"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   }
 }
