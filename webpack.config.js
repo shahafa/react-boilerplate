@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
@@ -21,6 +22,11 @@ const config = {
     new HtmlWebpackPlugin({
       template: './app/index.html',
     }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: 'development'
+      }
+    })
   ],
 };
 
